@@ -15,10 +15,10 @@ function getRequest(controller, functionName, filename, method, id) {
 	xhr.onreadystatechange = function() {
 		if (this.readyState === 4) {
 			if (this.status === 200) {
-				elmnt.innerHTML = this.responseText;
+				SetResults(this.responseText);
 			}
 			if (this.status === 404) {
-				elmnt.innerHTML = "Page not found.";
+				SetResults("Page not found.");
 			}
 		}
 	};
@@ -34,6 +34,5 @@ function SetResults(response) {
 
 function getHeroById() {
 	var id = document.forms["form"]["heroId"].value;
-	var response = getRequest(heroController, getFunction, getHeroFile, "getHeroById", id);
-	SetResults(response);
+	getRequest(heroController, getFunction, getHeroFile, "getHeroById", id);
 }
