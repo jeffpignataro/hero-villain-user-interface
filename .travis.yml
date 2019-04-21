@@ -3,3 +3,4 @@ deploy:
   bucket: "S3 Bucket"
   skip_cleanup: true
   region: "us-west-2"
+  language: generic
