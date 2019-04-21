@@ -8,7 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
 	<link rel="stylesheet" href="styles/bootstrap.min.css">
-	<link rel="stylesheet" href="styles/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 	<link rel="stylesheet" href="styles/themify-icons.css">
 	<link rel="stylesheet" href="styles/metisMenu.css">
 	<link rel="stylesheet" href="styles/owl.carousel.min.css">
@@ -38,11 +39,7 @@
 	<div class="page-container">
 		<!-- sidebar menu area start -->
 		<div class="sidebar-menu">
-			<div class="sidebar-header">
-				<div class="logo">
-					<a href="index.html"><img src="images/icon/logo.png" alt="logo"></a>
-				</div>
-			</div>
+			<div class="sidebar-header" html-include="includes/sidebar-header.html"></div>
 			<div class="main-menu" html-include="includes/main-menu.html"></div>
 		</div>
 		<!-- sidebar menu area end -->
@@ -534,12 +531,7 @@
 		</div>
 		<!-- main content area end -->
 		<!-- footer area start-->
-		<footer>
-			<div class="footer-area">
-				<p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.
-				</p>
-			</div>
-		</footer>
+		<footer html-include="includes/footer.html"></footer>
 		<!-- footer area end-->
 	</div>
 	<!-- page container area end -->
@@ -752,7 +744,7 @@
 	<!-- others plugins -->
 	<script src="scripts/plugins.js"></script>
 	<script src="scripts/scripts.js"></script>
-  <script src="scripts/include-html.js"></script>
+	<script src="scripts/include-html.js"></script>
 </body>
 
 </html>

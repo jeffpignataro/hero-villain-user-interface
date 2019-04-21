@@ -53,6 +53,9 @@
 
 
 /*------------------------- 1. Core Css -------------------*/
+body {
+    min-height: 100%;
+}
 
 .page-container {
     width: 100%;
@@ -95,6 +98,7 @@
 
 .main-content-inner {
     padding: 0 30px 50px;
+    min-height: 739px;
 }
 
 /*------------------------- END Core Css -------------------*/
@@ -151,6 +155,14 @@
 .logo a {
     display: inline-block;
     max-width: 120px;
+}
+
+.logo a i {
+    color: #8d97ad;
+}
+
+.logo a:hover i {
+    color: #FFFFFF;
 }
 
 .metismenu>li>a {
