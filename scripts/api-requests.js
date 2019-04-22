@@ -32,7 +32,82 @@ function SetResults(response) {
 	document.getElementById("results").innerHTML = response;
 }
 
+// Hero Functions
+function GetHeroBase(method, param = '') {
+	return getRequest(heroController, getFunction, getHeroFile, method, param);
+}
+
+function getAllHeroes() {
+	HeroBase("getAllHeroes");
+}
+
 function getHeroById() {
 	var id = document.forms["form"]["heroId"].value;
-	getRequest(heroController, getFunction, getHeroFile, "getHeroById", id);
+	HeroBase("getHeroById", id);
+}
+
+function getHeroByName() {
+	var name = document.forms["form"]["heroName"].value;
+	HeroBase("getHeroByName", name);
+}
+
+function getHeroByRealName() {
+	var realName = document.forms["form"]["heroRealName"].value;
+	HeroBase("getHeroByRealName", realName);
+}
+
+function getHeroesByPublisher() {
+	var publisher = document.forms["form"]["heroPublisher"].value;
+	HeroBase("getHeroesByPublisher", publisher);
+}
+
+// Villain Functions
+function GetVillanBase(method, param = '') {
+	return getRequest(villainController, getFunction, getVillainFile, method, param);
+}
+
+function getAllVillains() {
+	GetVillanBase("getAllVillains");
+}
+
+function getVillainsById() {
+	var id = document.forms["form"]["villainId"].value;
+	GetVillanBase("getVillainById", id);
+}
+
+function getVillainsByName() {
+	var name = document.forms["form"]["villainName"].value;
+	GetVillanBase("getVillainByName", name);
+}
+
+function getVillainByRealName() {
+	var realName = document.forms["form"]["villainRealName"].value;
+	GetVillanBase("getVillainByRealName", realName);
+}
+
+function getVillainsByPublisher() {
+	var publisher = document.forms["form"]["villainPublisher"].value;
+	GetVillanBase("getVillainByPublisher", publisher);
+	getRequest(villainController, getFunction, getVillainFile, "villainPublisher", id);
+}
+
+function getVillainsByCrime() {
+	var crime = document.forms["form"]["villainCrime"].value;
+	GetVillanBase("getVillainByCrime", crime);
+}
+
+// Miscellanous Functions
+function getPublishers(type) {
+	if (type.toLowerCase() === "hero")
+		GetHeroBase("getPublishers");
+	else if (type.toLowerCase() === "villain")
+		GetVillanBase("getPublishers");
+	else
+		return {
+			"data": "Error: Not Found"
+		};
+}
+
+function getCrimes() {
+	GetVillanBase("getCrimes");
 }

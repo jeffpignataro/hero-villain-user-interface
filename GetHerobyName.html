@@ -66,8 +66,39 @@
 					</div>
 				</div>
 				<!-- page title area end -->
-				<div class="main-content-inner">
-				</div>
+				<form id="form" onsubmit="javascript:getHeroByName();return false">
+					<div class="main-content-inner">
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-8">
+										<label for="heroName" class="col-form-label">Hero Name</label>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-4">
+										<input class="form-control" type="text" id="heroName" required="true">
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-md-8 mt-2">
+										<input id="getHeroByName" type="submit" class="btn btn-success"
+											value="Get Hero" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-md-8">
+										<div id="results"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
 			</div>
 			<!-- main content area end -->
 			<!-- footer area start-->
