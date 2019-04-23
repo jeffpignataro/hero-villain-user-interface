@@ -38,27 +38,27 @@ function GetHeroBase(method, param = '') {
 }
 
 function getAllHeroes() {
-	HeroBase("getAllHeroes");
+	GetHeroBase("getAllHeroes");
 }
 
 function getHeroById() {
 	var id = document.forms["form"]["heroId"].value;
-	HeroBase("getHeroById", id);
+	GetHeroBase("getHeroById", id);
 }
 
 function getHeroByName() {
 	var name = document.forms["form"]["heroName"].value;
-	HeroBase("getHeroByName", name);
+	GetHeroBase("getHeroByName", name);
 }
 
 function getHeroByRealName() {
 	var realName = document.forms["form"]["heroRealName"].value;
-	HeroBase("getHeroByRealName", realName);
+	GetHeroBase("getHeroByRealName", realName);
 }
 
 function getHeroesByPublisher() {
 	var publisher = document.forms["form"]["heroPublisher"].value;
-	HeroBase("getHeroesByPublisher", publisher);
+	GetHeroBase("getHeroesByPublisher", publisher);
 }
 
 // Villain Functions
@@ -99,7 +99,7 @@ function getVillainsByCrime() {
 // Miscellanous Functions
 function getPublishers(type) {
 	if (type.toLowerCase() === "hero")
-		GetHeroBase("getPublishers");
+		GetGetHeroBase("getPublishers");
 	else if (type.toLowerCase() === "villain")
 		GetVillanBase("getPublishers");
 	else
